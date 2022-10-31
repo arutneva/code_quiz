@@ -1,3 +1,15 @@
 header{
     display:flex;
 }
+
+#score{
+width: 90%;
+}
+
+#timer{
+width: 10%;
+}
+
+.hidden{
+    display: none;
+}
