@@ -21,11 +21,12 @@ var introductionEL = document.querySelector("#introduction")
 var questionsEL = document.querySelector("#questions")
 var timerEL = document.querySelector("#timer")
 var titleEl = document.querySelector("#title")
-var answer1El = document.querySelector("#answer1")
-var answer2El = document.querySelector("#answer2")
-var answer3El = document.querySelector("#answer3")
-var answer4El = document.querySelector("#answer4")
-var answer5El = document.querySelector("#answer5")
+var optionsEL = document.querySelector("#options")
+var a1El = document.querySelector("#a1")
+var a2El = document.querySelector("#a2")
+var a3El = document.querySelector("#a3")
+var a4El = document.querySelector("#a4")
+var a5El = document.querySelector("#a5")
 var beginBtn = document.querySelector("#begin")
 
 var question = [
@@ -57,9 +58,9 @@ var question = [
 ]
 
 
-
+var index = 0
 var timeLeft = 75
-var clock
+var clock;
 
 
 function count() {
@@ -77,22 +78,22 @@ function startQuestions() {
 
 function displayQuestion() {
     titleEl.textContent = question[i].title
-    answer1El.textContent = question[i].answers[0]
-    answer2El.textContent = question[i].answers[1]
-    answer3El.textContent = question[i].answers[2]
-    answer4El.textContent = question[i].answers[3]
-    answer5El.textContent = question[i].answers[4]
+    a1El.textContent = question[i].answers[0]
+    a2El.textContent = question[i].answers[1]
+    a3El.textContent = question[i].answers[2]
+    a4El.textContent = question[i].answers[3]
+    a5El.textContent = question[i].answers[4]
 }
 
 function next() {
     index++
 }
 
-answer1El.addEventListener("click", next)
-answer2El.addEventListener("click", next)
-answer3El.addEventListener("click", next)
-answer4El.addEventListener("click", next)
-answer5El.addEventListener("click", next)
+a1El.addEventListener("click", next)
+a2El.addEventListener("click", next)
+a3El.addEventListener("click", next)
+a4El.addEventListener("click", next)
+a5El.addEventListener("click", next)
 
 
 beginBtn.addEventListener("click", startQuestions)
